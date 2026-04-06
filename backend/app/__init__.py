@@ -1,0 +1,1 @@
+"""SalesTool backend application package."""

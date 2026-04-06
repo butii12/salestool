@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: salestool-backend
+Version: 0.1.0
+Summary: Backend foundation for the SalesTool multi-tenant SaaS platform.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: alembic<2.0.0,>=1.16.0
+Requires-Dist: fastapi<1.0.0,>=0.115.0
+Requires-Dist: psycopg[binary]<4.0.0,>=3.2.0
+Requires-Dist: pydantic-settings<3.0.0,>=2.8.0
+Requires-Dist: sqlalchemy<3.0.0,>=2.0.0
+Requires-Dist: uvicorn[standard]<1.0.0,>=0.34.0
+Provides-Extra: dev
+Requires-Dist: httpx<1.0.0,>=0.28.0; extra == "dev"
+Requires-Dist: pytest<9.0.0,>=8.3.0; extra == "dev"
+
+# Backend Foundation
+
+## Overview
+This directory contains the initial FastAPI backend foundation for SalesTool.
+
+## Local development
+1. Copy `.env.example` to `.env`
+2. Install dependencies
+3. Run the API with Uvicorn
+4. Run Alembic migrations
+
+## Commands
+Start the API:
+
+```bash
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Create a migration:
+
+```bash
+alembic revision -m "create foundation"
+```
+
+Run migrations:
+
+```bash
+alembic upgrade head
+```

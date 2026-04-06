@@ -1,0 +1,35 @@
+[project]
+name = "salestool-backend"
+version = "0.1.0"
+description = "Backend foundation for the SalesTool multi-tenant SaaS platform."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "alembic>=1.16.0,<2.0.0",
+  "fastapi>=0.115.0,<1.0.0",
+  "psycopg[binary]>=3.2.0,<4.0.0",
+  "pydantic-settings>=2.8.0,<3.0.0",
+  "sqlalchemy>=2.0.0,<3.0.0",
+  "uvicorn[standard]>=0.34.0,<1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28.0,<1.0.0",
+  "pytest>=8.3.0,<9.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
