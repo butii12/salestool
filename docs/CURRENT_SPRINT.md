@@ -1,22 +1,26 @@
 # Current Sprint
 
 ## Goal
-Finalize cross-cutting architecture contracts before implementation begins.
+Start implementation of the backend foundation for SalesTool.
 
 ## Focus
-- Tenant Isolation Contract
-- Configuration Contract
-- Authorization and Entitlement Contract
-- Module Interaction Contract
+- Create backend project structure
+- Add FastAPI base app
+- Add config system
+- Add database base and session
+- Add Alembic setup
+- Add Docker setup
+- Add health endpoints
 
 ## Done when
-- all four contracts are written
-- architecture ambiguity is reduced
-- planning structure is implementation-ready
-- Codex confirms consistency and remaining risks are explicit
+- backend structure exists
+- app starts locally/in docker
+- database connection is configured
+- migrations are ready
+- health endpoint responds successfully
 
 ## Out of scope
-- no production backend implementation
-- no migrations
-- no frontend
-- no deployment work
+- no business modules yet
+- no KPI engine yet
+- no frontend yet
+- no authentication logic yet
