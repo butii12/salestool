@@ -1,30 +1,22 @@
 # Current Sprint
 
 ## Goal
-Only planning and architecture setup.
-No production feature coding yet.
+Finalize cross-cutting architecture contracts before implementation begins.
 
 ## Focus
-- Finalize Plane structure
-- Finalize epic/work-item hierarchy
-- Finalize issue list and sequencing
-- Ensure architecture supports:
-  - multi-tenant
-  - departments
-  - dynamic KPI system
-  - dynamic widgets
-  - dynamic uploads
-  - plans and feature flags
-  - future SSO
+- Tenant Isolation Contract
+- Configuration Contract
+- Authorization and Entitlement Contract
+- Module Interaction Contract
 
 ## Done when
-- Plane contains the final planning structure
-- All major systems are represented
-- Sequencing is clear
-- The project can move into implementation mode without architectural ambiguity
+- all four contracts are written
+- architecture ambiguity is reduced
+- planning structure is implementation-ready
+- Codex confirms consistency and remaining risks are explicit
 
 ## Out of scope
-- No backend implementation
-- No migrations
-- No frontend
-- No deployment work
+- no production backend implementation
+- no migrations
+- no frontend
+- no deployment work
